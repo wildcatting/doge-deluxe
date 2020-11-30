@@ -1,0 +1,130 @@
+[
+  {
+    "id": 0,
+    "name": "Frieda",
+    "picture": "images/scottish-terridoge.jpeg",
+    "age": 3,
+    "breed": "Scottish Terridoge",
+    "location": "Lisco, Alabama"
+  },
+  {
+    "id": 1,
+    "name": "Gina",
+    "picture": "images/scottish-terridoge.jpeg",
+    "age": 3,
+    "breed": "Scottish Terridoge",
+    "location": "Tooleville, West Virginia"
+  },
+  {
+    "id": 2,
+    "name": "Collins",
+    "picture": "images/french-bulldoge.jpeg",
+    "age": 2,
+    "breed": "French Bulldoge",
+    "location": "Freeburn, Idaho"
+  },
+  {
+    "id": 3,
+    "name": "Melissa",
+    "picture": "images/doger.jpeg",
+    "age": 2,
+    "breed": "Doger",
+    "location": "Camas, Pennsylvania"
+  },
+  {
+    "id": 4,
+    "name": "Jeanine",
+    "picture": "images/french-bulldoge.jpeg",
+    "age": 2,
+    "breed": "French Bulldoge",
+    "location": "Gerber, South Dakota"
+  },
+  {
+    "id": 5,
+    "name": "Elvia",
+    "picture": "images/french-bulldoge.jpeg",
+    "age": 3,
+    "breed": "French Bulldoge",
+    "location": "Innsbrook, Illinois"
+  },
+  {
+    "id": 6,
+    "name": "Latisha",
+    "picture": "images/golden-doggo.jpeg",
+    "age": 3,
+    "breed": "Golden Doggo",
+    "location": "Soudan, Louisiana"
+  },
+  {
+    "id": 7,
+    "name": "Coleman",
+    "picture": "images/golden-doggo.jpeg",
+    "age": 3,
+    "breed": "Golden Doggo",
+    "location": "Jacksonwald, Palau"
+  },
+  {
+    "id": 8,
+    "name": "Nichole",
+    "picture": "images/french-bulldoge.jpeg",
+    "age": 2,
+    "breed": "French Bulldoge",
+    "location": "Honolulu, Hawaii"
+  },
+  {
+    "id": 9,
+    "name": "Fran",
+    "picture": "images/doger.jpeg",
+    "age": 3,
+    "breed": "Doger",
+    "location": "Matheny, Utah"
+  },
+  {
+    "id": 10,
+    "name": "Leonor",
+    "picture": "images/doger.jpeg",
+    "age": 2,
+    "breed": "Doger",
+    "location": "Tyhee, Indiana"
+  },
+  {
+    "id": 11,
+    "name": "Dean",
+    "picture": "images/scottish-terridoge.jpeg",
+    "age": 3,
+    "breed": "Scottish Terridoge",
+    "location": "Windsor, Montana"
+  },
+  {
+    "id": 12,
+    "name": "Stevenson",
+    "picture": "images/french-bulldoge.jpeg",
+    "age": 3,
+    "breed": "French Bulldoge",
+    "location": "Kingstowne, Nevada"
+  },
+  {
+    "id": 13,
+    "name": "Kristina",
+    "picture": "images/golden-doggo.jpeg",
+    "age": 4,
+    "breed": "Golden Doggo",
+    "location": "Sultana, Massachusetts"
+  },
+  {
+    "id": 14,
+    "name": "Ethel",
+    "picture": "images/golden-doggo.jpeg",
+    "age": 2,
+    "breed": "Golden Doggo",
+    "location": "Broadlands, Oregon"
+  },
+  {
+    "id": 15,
+    "name": "Terry",
+    "picture": "images/golden-doggo.jpeg",
+    "age": 2,
+    "breed": "Golden Doggo",
+    "location": "Dawn, Wisconsin"
+  }
+]

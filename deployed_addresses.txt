@@ -1,0 +1,2 @@
+testnet: Ropsten
+address: https://ropsten.infura.io/v3/092b7f8203174bf0b88c5b51a664f3c7

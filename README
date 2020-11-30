@@ -1,0 +1,14 @@
+# 
+
+The Simple Giftcard directory is a truffle project that contains the required contract, migration and test files. This smart contract is a template for a merchant to provide digital gift cards as it gives the gift card winner a unique, single-use token that will enable a discount on goods or services.
+
+While your online store should be accessible to all, a customer must provide proof that they possess the gift card token if they want a discount. Upon finalizing their shopping cart and proceeding to checkout, the customer will be prompted with the opportunity to redeem a gift card token towards their purchase.
+
+
+# Implementing Simple Giftcard
+
+Clone this repo to your local machine.
+
+To test your implementation start your development blockchain by running `$ truffle develop` from the terminal in the project directory. From the truffle console, compile and migrate the contracts by running `compile` and `migrate`. You can run the pre-written tests by running `test`.
+
+If your tests do not pass, modify the contract, recompile, redeploy and retest. Iterate until all of the tests pass.
