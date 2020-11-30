@@ -1,5 +1,5 @@
 # Circuit Breaker
-The circuit breaker was implemented to address the case where two customers attempted to purchase the same dog within a short enough window of time for the site to fail in alerting the customer who fails to finalize the purchase first. The site would prevent the late customer from proceeding to send their ether since their dog of choice is no longer available.
+The circuit breaker was implemented to address the case where two or more customers attempting to purchase the same dog within a short enough window of time would not be alerted by the site if someone purchases said dog moments beforehand. The breaker would prevent subsequent customers from sending their ether since their dog of choice is no longer available.
 
 # Restricted Access
-Purchase.sol has the admin-only function of resetting the site, effectively setting all customer purchase counts to zero and "ending" or "restarting" the discount. Another test performed in Purchase.sol is tracking customers who are eligible for the store discount. For this example, the criteria is get your second dog free after buying your first. We wouldn't want anyone else to be able to change the state of the customer purchase count or be able to access any information at all about the customer. We also wouldn't want anyone to be able to have access to the reset function. Hence, these variables are set to private. 
+The restricted access design pattern was implemented primarily because a reset function was included and this should only be accessible to the admin/owner of the contract.

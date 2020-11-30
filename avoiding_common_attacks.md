@@ -1,7 +1,5 @@
-# AVOIDING COMMON ATTACKS
-
 # MetaMask Re-Entrancy
-Upon testing, it was discovered that a customer could load up pending transactions on MetaMask, leading to buying the first dog and then hacking the get-one-free discount by loading up the remaining fifteen available dogs in the cart. By loading up these pending transactions, the customer could get any remaining dogs in the store for free. This bug was addressed by adding an extra check before the purchase function completed as to whether a customer was indeed eligible for the discount, as any transactions in MetaMask would change the customer's state.
+Upon testing, it was discovered that a customer could load up pending transactions on MetaMask. After buying the first dog, an account could then hack the get-one-free discount by loading up the remaining available dogs in the cart. By loading up these pending transactions, the account could get every remaining dog in the store for free. This bug was addressed by adding an extra requirement verifying whether an account is still eligible for the discount, since a single transaction in MetaMask changes the contract state.
 
-# DoS
-The reset function in Solidity.sol originally contained the refund.
+# Denial of Service (DoS)
+Initially, the reset function reverted all purchases and returned accumulated balances to every account that had transacted with the store. However, it was vulnerable to a DoS attack in which a single external transfer call throwing would 1) prevent the admin from being able to reset the store and 2) keep all accounts from receiving their accumulated balances. In order to address this vulnerability, the pull over push pattern was implemented where the withdraw functionality is separated into its own function.

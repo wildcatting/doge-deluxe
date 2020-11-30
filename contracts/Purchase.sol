@@ -38,7 +38,7 @@ contract Purchase {
     }
 
     // @notice Accounts can have ETH refunded for transactions prior to reset.
-    // @dev Triggers after reset. Accessible only by accounts that have spent ETH in store.
+    // @dev Accessible after reset by accounts that have spent ETH in store.
     function withdraw() public {
         // @dev Denial of Service (DoS) attack prevention (see avoiding_common_attacks.md for details)
         require(_addressRefundBalances[msg.sender] > 0);
@@ -57,12 +57,13 @@ contract Purchase {
         return _admin == msg.sender;
     }
 
-    // @notice Prevents purchase if UI fails to alert account that the dog of choice is no longer available.
+    // @notice Prevents purchase function once triggered.
     function circuitBreaker() public {
         _stopped = true;
     }
 
     // @notice Purchase available dog
+    // @param petId ID of dog being purchased.
     function purchase(uint petId) public payable stopInEmergency returns(uint) {
         require(petId >= 0 && petId <= 15);
         require(_purchasers[petId] == address(0x0));
