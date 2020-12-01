@@ -1,5 +1,6 @@
 # Doge Emporium
 Doge Emporium runs a store where customers can purchase dogs. The store also offers a discount of "Buy one and get your second free." The owner of the store can also revert all transactions and allow for customers to withdraw the amounts that they spent at the store.
+
 This directory is a truffle project containing the required contract, migration and test files.
 
 # Implementation
