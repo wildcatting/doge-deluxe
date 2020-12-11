@@ -3,7 +3,7 @@ Doge Emporium runs a pet store where customers can purchase dogs. In this Dapp s
 The owner of the store can also revert all transactions and allow for customers to withdraw the amounts that they spent at the store. Only the owner can reset the store and only customers who had their purchases cancelled may withdraw ETH.
 
 
-# Implementation
+## Implementation
 - Clone this repo to your local machine.
 - To test your implementation start your development blockchain by running `$ truffle develop` from the terminal in the project directory. 
 - From the truffle console, compile and migrate the contracts by running `compile` and `migrate`. 
