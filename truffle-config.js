@@ -12,9 +12,11 @@ module.exports = {
       network_id: "*" // Match any network id
     },
     ropsten: {
-      provider: function() {
-        return new HDWalletProvider(config.MNEMONIC, "https://ropsten.infura.io/v3/092b7f8203174bf0b88c5b51a664f3c7")
-      },
+      provider: () =>
+        new HDWalletProvider(
+          config.MNEMONIC, 
+          'https://ropsten.infura.io/v3/${process.env.INFURA_PROJECT_ID}`
+        ),
       network_id: 3,
       gas: 4000000      //make sure this gas allocation isn't over 4M, which is the max
     }
