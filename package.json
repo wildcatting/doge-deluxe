@@ -12,11 +12,13 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "lite-server": "^2.3.0"
-  },
+  "devDependencies": {},
   "dependencies": {
     "@openzeppelin/contracts": "2.5.1",
+    "@truffle/hdwallet-provider": "^1.2.0",
+    "config": "^3.3.3",
+    "dotenv": "^8.2.0",
+    "request": "^2.88.2",
     "truffle-hdwallet-provider": "^1.0.17"
   }
 }
