@@ -24,9 +24,9 @@ git clone https://github.com/jun-sung/doge-emporium.git
 cd doge-emporium
 ```
 
-Then install in our project:
+Then install all the project dependencies:
 ```Bash
-npm install --save dotenv
+npm install
 ```
 
 ## Compiling, migrating, and testing the smart contract
