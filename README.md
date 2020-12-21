@@ -24,10 +24,14 @@ git clone https://github.com/jun-sung/doge-emporium.git
 cd doge-emporium
 ```
 
+Then install in our project:
+```Bash
+npm install --save dotenv
+```
 
 ## Compiling, migrating, and testing the smart contract
 
-Solidity is a compiled language, meaning we need to compile our Solidity to bytecode for the Ethereum Virtual Machine (EVM) to execute. Since our DApp is setup as a Truffle project, we'll be using Truffle's command tools to compile and migrate contracts onto our local blockchain.
+Solidity is a compiled language, meaning we need to compile our Solidity to bytecode for the Ethereum Virtual Machine (EVM) to execute. Since our DApp is setup as a Truffle project, we'll be utilizing Truffle's command tools to compile, migrate, and test our smart contract on a local blockchain.
 
 ### Compilation
 
