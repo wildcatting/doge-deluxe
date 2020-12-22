@@ -20,7 +20,6 @@
     "dotenv": "^8.2.0",
     "lite-server": "^2.6.1",
     "request": "^2.88.2",
-    "truffle-hdwallet-provider": "^1.0.17",
-    "zeppelin-solidity": "^1.12.0"
+    "truffle-hdwallet-provider": "^1.0.17"
   }
 }
