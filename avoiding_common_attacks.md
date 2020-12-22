@@ -46,7 +46,7 @@ However, this was vulnerable to a DoS attack in which a single external transfer
 1. Prevent the admin from being able to reset the store and 
 2. Keep all accounts from receiving their accumulated balances.  
 
-In order to address this vulnerability, the pull over push pattern was implemented by separating the withdraw functionality into its own function.
+In order to address this vulnerability, the [pull over push pattern](https://consensys.github.io/smart-contract-best-practices/recommendations/#favor-pull-over-push-for-external-calls) was implemented by separating the withdraw functionality into its own function.
 ```
 function reset() public {
     require(_admin == msg.sender);
