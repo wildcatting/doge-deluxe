@@ -1,14 +1,13 @@
 pragma solidity ^0.5.0;
 
 import "@openzeppelin/contracts/math/SafeMath.sol";
-import "@openzeppelin-solidity/contracts/access/Ownable.sol";
 
 // @title Pet shop manager
 // @author Jun Sung Lee
 // @notice Purchase available dogs from shop, apply discount when available, and refund ETH if store is reset.
 // @dev All function calls are currently implemented without side effects.
 
-contract Purchase is Ownable {
+contract Purchase {
 
     using SafeMath for uint;
     
