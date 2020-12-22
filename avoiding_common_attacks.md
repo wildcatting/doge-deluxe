@@ -44,7 +44,8 @@ function reset() public {
 ```
 However, this was vulnerable to a DoS attack in which a single external transfer call throwing would: 
 1. Prevent the admin from being able to reset the store and 
-2. Keep all accounts from receiving their accumulated balances. 
+2. Keep all accounts from receiving their accumulated balances.  
+
 In order to address this vulnerability, the pull over push pattern was implemented by separating the withdraw functionality into its own function.
 ```
 function reset() public {
