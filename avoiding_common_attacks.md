@@ -2,7 +2,7 @@
 
 Here are two loopholes discovered while testing and addressed in the smart contract.
 
-### MetaMask Re-Entrancy
+## MetaMask Re-Entrancy
 
 Upon testing, it was discovered that a customer could load up pending transactions on MetaMask. After buying the first dog, an account could then hack the get-one-free discount by loading up the remaining available dogs in the cart. By loading up these pending transactions, the account could get every remaining dog in the store for free. This bug was addressed by adding an extra check in the purchase function verifying whether an account is still eligible for the discount, since a single transaction in MetaMask changes the contract state.
 ```
@@ -23,7 +23,7 @@ function purchase(uint petId) public payable stopInEmergency returns(uint) {
 Even if the hack was discovered and a customer loaded up their MetaMask cart with multiple doges, a single purchase would increase the msg.value count. Therefore, checking if msg.value == 0 before every purchase prevented the discount from being applied to all other pending transactions.  
 
 
-### Denial of Service (DoS)
+## Denial of Service (DoS)
 
 Initially, the reset function reverted all purchases and returned accumulated balances to every account that had transacted with the store. 
 ```
