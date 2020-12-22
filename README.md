@@ -2,7 +2,6 @@
 
 Doge Emporium is an expanded DApp based on [Truffle's Pet Shop Tutorial](https://www.trufflesuite.com/tutorials/pet-shop), where the shop is offering a special "Buy one and get your second free" discount.
 
-### About
 To purchase a doge, the user needs to connect their [MetaMask Wallet](https://metamask.io). Once connected, the user's current wallet address will display below the shop logo. The owner of the shop can also revert all transactions, which allows customers to withdraw amounts they spent int the store. Only the owner can reset shop transactions and only customers who previously made purchases may withdraw ETH.
 
 
