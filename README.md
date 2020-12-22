@@ -186,6 +186,14 @@ Here's a condensed version of step 7 where the owner purchases 2 doges with the 
 The wallet has virtually returned to the original balance of 100 ETH minus gas fees from contract migration and transactions.
 
 
-## Demo
+## Appendix
 
 Here's a [video](https://vimeo.com/485815714) walkthrough of the DApp in action.
+
+### Technical Documentation
+
+| File | Description |
+| ------ | ------ |
+| [design_pattern_decisions.md](./design_pattern_decisions.md) | Smart contract design rationale |
+| [avoiding_common_attacks.md](./avoiding_common_attacks.md) | Security measures against hacks |
+| [deployed_addresses.txt](./deployed_addresses.txt) | Ropsten testnet deployment info |
