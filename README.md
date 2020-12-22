@@ -1,4 +1,4 @@
-# Doge Emporium
+# Doge Emporium 🐕
 
 Doge Emporium is an expanded DApp based on [Truffle's Pet Shop Tutorial](https://www.trufflesuite.com/tutorials/pet-shop), where the shop is offering a special "Buy one and get your second free" discount.
 
@@ -6,7 +6,7 @@ Doge Emporium is an expanded DApp based on [Truffle's Pet Shop Tutorial](https:/
 To purchase a doge, the user needs to connect their [MetaMask Wallet](https://metamask.io). Once connected, the user's current wallet address will display below the shop logo. The owner of the shop can also revert all transactions, which allows customers to withdraw amounts they spent int the store. Only the owner can reset shop transactions and only customers who previously made purchases may withdraw ETH.
 
 
-## Installation
+## Installation 📁
 
 There are a few technical requirements before we start. Please install the following:
 
@@ -29,7 +29,7 @@ Then install all the project dependencies:
 npm install
 ```
 
-## Compiling, migrating, and testing the smart contract
+## Compiling, migrating, and testing the smart contract 💻
 
 Solidity is a compiled language, meaning we need to compile our Solidity to bytecode for the Ethereum Virtual Machine (EVM) to execute. Since our DApp is setup as a Truffle project, we'll be utilizing Truffle's command tools to compile, migrate, and test our smart contract on a local blockchain.
 
@@ -94,7 +94,7 @@ If all the tests pass, you'll see console output similar to this:
 ![Optional Text](./images/TruffleTest.png)  
 
 
-## Interacting with the DApp in a browser 
+## Interacting with the DApp in a browser 🌐
 
 Now we're ready to use our DApp!
 
@@ -186,7 +186,7 @@ Here's a condensed version of step 7 where the owner purchases 2 doges with the 
 The wallet has virtually returned to the original balance of 100 ETH minus gas fees from contract migration and transactions.
 
 
-## Appendix
+## Appendix 🔗
 
 Here's a [video](https://vimeo.com/485815714) walkthrough of the DApp in action.
 
