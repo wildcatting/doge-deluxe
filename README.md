@@ -41,7 +41,7 @@ truffle compile
 ```
 
 You should see output similar to the following:  
-![Optional Text](./images/TruffleCompile.png)
+![Optional Text](./images/TruffleCompile.png)  
 
 ### Migration
 
@@ -49,7 +49,7 @@ If there are no errors, we've successfully compiled our contracts and now we can
 
 Before we can migrate our contract to the blockchain, we need to have a blockchain running. In this walkthrough, we'll use [Ganache](https://www.trufflesuite.com/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. If you haven't already, [download Ganache](https://www.trufflesuite.com/ganache) and double click the icon to launch the application.
 
-![Optional Text](./images/GanacheInitial.png)
+![Optional Text](./images/GanacheInitial.png)  
 
 You can also run the [command line version](https://github.com/trufflesuite/ganache), `ganache-cli` via npm:
 ```Bash
@@ -57,7 +57,8 @@ npm install -g ganache-cli
 ```
 
 By default, Ganache should be running on port 7545. The details can be seen in the **RPC Server**.
-![Optional Text](./images/GanacheGUI.png)
+
+![Optional Text](./images/GanacheGUI.png)  
 
 Our truffle-config.js file is currently set to run development on Port 8545.
 ```javascript
@@ -78,7 +79,8 @@ truffle migrate
 ```
 
 You should see output similar to the following:  
-![Optional Text](./images/TruffleMigrate.png)
+
+![Optional Text](./images/TruffleMigrate.png)  
 
 ### Testing
 
@@ -87,8 +89,9 @@ If migration is successful, we can now run the pre-written Solidity tests:
 truffle test
 ```
 
-If all the tests pass, you'll see console output similar to this:
-![Optional Text](./images/TruffleTest.png)
+If all the tests pass, you'll see console output similar to this:  
+
+![Optional Text](./images/TruffleTest.png)  
 
 
 ## Interacting with the DApp in a browser 
@@ -101,25 +104,41 @@ The easiest way to interact with our dapp in a browser is through MetaMask, a br
 
 1. Install MetaMask in your browser.
 2. Once installed, a tab in your browser should open displaying the following:  
-![Optional Text](./images/MetaMaskWelcome.png)
+
+![Optional Text](./images/MetaMaskWelcome.png)  
+
 3. After clicking **Getting Started**, you should see the initial MetaMask screen. Click **Import Wallet**.  
-![Optional Text](./images/MetaMaskInitial.png)
+
+![Optional Text](./images/MetaMaskInitial.png)  
+
 4. Next, you should see a screen requesting anonymous analytics. Choose to decline or agree.  
-![Optional Text](./images/MetaMaskAnalytics.png)
+
+![Optional Text](./images/MetaMaskAnalytics.png)  
+
 5. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.  
+
 >  **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!  
 
 Enter a password below and click **Import**.  
-![Optional Text](./images/MetaMaskSeed.png)
+
+![Optional Text](./images/MetaMaskSeed.png)  
+
 6. If all goes well, MetaMask should display the following screen. Click **All Done**.
+
 7. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.  
-![Optional Text](./images/MetaMaskNetworkMenu.png)
+
+![Optional Text](./images/MetaMaskNetworkMenu.png)  
+
 8. In the box titled "Network Name" enter `Localhost 8545`, in "New RPC URL" enter `http://127.0.0.1:8545`, in "Chain ID" enter `1337`, and click **Save**.
-![Optional Text](./images/MetaMaskLocal.png)
+
+![Optional Text](./images/MetaMaskLocal.png)  
+
 9. Click the top-right X to close out of Settings and return to the Accounts page.
 
 Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run. You should also see this correspond with the display on Ganache GUI.  
-![Optional Text](./images/MetaMaskConfigured.png)
+
+![Optional Text](./images/MetaMaskConfigured.png)  
+
 Configuration is now complete.
 
 ### Using the DApp
@@ -131,24 +150,39 @@ npm run dev
 The dev server will launch and automatically open a new browser tab containing your DApp.
 
 2. A MetaMask pop-up should also appear requesting your approval to allow Jun's Doge Emporium to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.  
-![Optional Text](./images/RunDev.png)
+
+![Optional Text](./images/RunDev.png)  
+
 The active wallet address will now be displayed under the store name (*Shopping as: 0x...*).
 
 3. To use the DApp, click the **Purchase** button on the doge of your choice. Each doge is priced at 1 ETH. 
 4. You'll be automatically prompted to approve the transaction costing 1 ETH (excluding gas fees) by MetaMask. Click **Confirm** to approve the transaction.  
-![Optional Text](./images/MetaMaskTransactionConfirm.png)
+
+![Optional Text](./images/MetaMaskTransactionConfirm.png)  
+
 5. The page should refresh automatically and you'll now see the button for the chosen doge display "Purchased (No longer available)" and become disabled.  
-![Optional Text](./images/MetaMaskPurchase.png)
+
+![Optional Text](./images/MetaMaskPurchase.png)  
+
 And in MetaMask, you'll see the transaction listed:  
-![Optional Text](./images/MetaMaskBalance.png)
+
+![Optional Text](./images/MetaMaskBalance.png)  
+
 You'll also see the same transaction listed in Ganache under the "Transactions" section and new ETH balance for the corresponding address.
+
 6. In order to use the shop discount, select another doge. MetaMask should now prompt you with a transaction costing 0 ETH.  
-![Optional Text](./images/MetaMaskDoge2.png)
+
+![Optional Text](./images/MetaMaskDoge2.png)  
+
 7. The wallet address that established the contract is the owner of the shop. Only the owner has access to the **Reset** button. The **Reset** button reverts all previous transactions at the shop and costs 0 ETH.
 Once reset, a **Withdraw** button becomes available. Only customers who have spent ETH before the reset will have access to the **Withdraw** button.  
-![Optional Text](./images/ShopButtons.png)
+
+![Optional Text](./images/ShopButtons.png)  
+
 Here's a condensed version of step 7 where the owner purchases 2 doges with the shop discount, resets the store and withdraws the 1 ETH previously spent:  
-![Optional Text](./images/MetaMaskFinal.png)
+
+![Optional Text](./images/MetaMaskFinal.png)  
+
 The wallet has virtually returned to the original balance of 100 ETH minus gas fees from contract migration and transactions.
 
 
