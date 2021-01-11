@@ -1,13 +1,14 @@
 pragma solidity ^0.5.0;
 
 import "@openzeppelin/contracts/math/SafeMath.sol";
+import "./Ownable.sol";
 
 // @title Pet shop manager
 // @author Jun Sung Lee
 // @notice Purchase available dogs from shop, apply discount when available, and refund ETH if store is reset.
 // @dev All function calls are currently implemented without side effects.
 
-contract Purchase {
+contract Purchase is Ownable {
 
     using SafeMath for uint;
     
@@ -25,8 +26,8 @@ contract Purchase {
 
     // @notice Reverts all previous transactions. Transaction history prior to reset is stored in _addressRefundBalances.
     // @dev Accessible only by admin. 
-    function reset() public {
-        require(_admin == msg.sender);
+    function reset() public onlyOwner {
+//        require(_admin == msg.sender);
         for (uint i = 0; i < _purchasers.length; i++) {
             address purchaser = _purchasers[i];
             if (purchaser != address(0x0)) {
@@ -50,11 +51,6 @@ contract Purchase {
     // @return if msg.sender has available ETH to withdraw.
     function refundAvailable() public view returns(bool) {
         return _addressRefundBalances[msg.sender] > 0;
-    }
-
-    // @return if msg.sender is admin.
-    function isAdmin() public view returns(bool) {
-        return _admin == msg.sender;
     }
 
     // @notice Prevents purchase function once triggered.

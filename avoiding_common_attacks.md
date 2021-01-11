@@ -27,8 +27,7 @@ Even if the hack was discovered and a customer loaded up their MetaMask cart wit
 
 Initially, the reset function reverted all purchases and returned accumulated balances to every account that had transacted with the store. 
 ```
-function reset() public {
-    require(_admin == msg.sender);
+function reset() public onlyOwner {
     uint amount = _addressRefundBalances[msg.sender];
     _addressRefundBalances[msg.sender] = 0;
     msg.sender.transfer(amount);
@@ -48,8 +47,7 @@ However, this was vulnerable to a DoS attack in which a single external transfer
 
 In order to address this vulnerability, the [pull over push pattern](https://consensys.github.io/smart-contract-best-practices/recommendations/#favor-pull-over-push-for-external-calls) was implemented by separating the withdraw functionality into its own function.
 ```
-function reset() public {
-    require(_admin == msg.sender);
+function reset() public onlyOwner {
     for (uint i = 0; i < _purchasers.length; i++) {
         address purchaser = _purchasers[i];
         if (purchaser != address(0x0)) {

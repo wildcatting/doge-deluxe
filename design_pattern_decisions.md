@@ -9,9 +9,10 @@ function circuitBreaker() public {
 ```
 
 ### Restricted Access
-The restricted access design pattern was implemented primarily because a reset function was included and this should only be accessible to the admin/owner of the contract.
+The restricted access design pattern was implemented primarily because a reset function was included and this should only be accessible to the admin/owner of the contract. The onlyOwner modifier from OpenZeppelin's Ownable.sol was used.
 ```
-function isAdmin() public view returns(bool) {
-    return _admin == msg.sender;
+modifier onlyOwner() {
+    require(isOwner());
+    _;
 }
 ```

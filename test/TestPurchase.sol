@@ -36,11 +36,6 @@ contract TestPurchase {
         Assert.equal(purchasers[expectedPetId], expectedPurchaser, "Owner of the expected pet should be this contract");
     }
 
-    // Testing admin status of contract owner because this determines whether the reset button is visible or not.
-    function testIsNotAdmin() public {
-        Assert.equal(buy.isAdmin(), false, "Owner of the contract should not be the admin");
-    }
-
     // Testing availability of withdrawable funds because this determines whether the refund button is visible or not.
     function testRefundAvailable() public {
         Assert.equal(buy.refundAvailable(), false, "Owner should not have available funds to withdraw");
