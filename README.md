@@ -196,3 +196,16 @@ Here's a [video](https://vimeo.com/485815714) walkthrough of the DApp in action.
 | [design_pattern_decisions.md](./design_pattern_decisions.md) | Smart contract design rationale |
 | [avoiding_common_attacks.md](./avoiding_common_attacks.md) | Security measures against hacks |
 | [deployed_addresses.txt](./deployed_addresses.txt) | Ropsten testnet deployment info |
+
+### To-Dos
+
+- Add onlyOwner withdraw function 
+```
+function withdraw() external onlyOwner {
+  address payable _owner = address(uint160(owner()));
+  _owner.transfer(address(this).balance);
+}
+```
+- Reconfigure previous withdraw function as claimRefund
+- Customize pets / assign hashed ID
+- Stylize buttons
