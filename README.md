@@ -207,5 +207,6 @@ function withdraw() external onlyOwner {
 }
 ```
 - Reconfigure previous withdraw function as claimRefund
-- Customize pets / assign hashed ID
+- Implement ERC721 for tokenizing and allowing customers to swap doges via tokens.
+- Add different types of dogs
 - Stylize buttons
