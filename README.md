@@ -208,5 +208,6 @@ function withdraw() external onlyOwner {
 ```
 - Reconfigure previous withdraw function as claimRefund
 - Implement ERC721 for tokenizing and allowing customers to swap doges via tokens.
+- Test and finalize web3/MetaMask boilerplate in index.html
 - Add different types of dogs
 - Stylize buttons
