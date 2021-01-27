@@ -1,11 +1,11 @@
 [
   {
     "id": 0,
-    "name": "Frieda",
-    "picture": "images/scottish-terridoge.jpeg",
-    "age": 3,
-    "breed": "Scottish Terridoge",
-    "location": "Lisco, Alabama"
+    "name": "Manna",
+    "picture": "images/manna.jpg",
+    "age": 1,
+    "breed": "Mini Poodle",
+    "location": "Seattle, WA"
   },
   {
     "id": 1,
@@ -13,7 +13,7 @@
     "picture": "images/scottish-terridoge.jpeg",
     "age": 3,
     "breed": "Scottish Terridoge",
-    "location": "Tooleville, West Virginia"
+    "location": "Tooleville, WV"
   },
   {
     "id": 2,
@@ -21,23 +21,23 @@
     "picture": "images/french-bulldoge.jpeg",
     "age": 2,
     "breed": "French Bulldoge",
-    "location": "Freeburn, Idaho"
+    "location": "Freeburn, ID"
   },
   {
     "id": 3,
-    "name": "Melissa",
-    "picture": "images/doger.jpeg",
+    "name": "Wow",
+    "picture": "images/much-doge.jpg",
     "age": 2,
-    "breed": "Doger",
-    "location": "Camas, Pennsylvania"
+    "breed": "Shibe",
+    "location": "Albuquerque, NM"
   },
   {
     "id": 4,
-    "name": "Jeanine",
-    "picture": "images/french-bulldoge.jpeg",
-    "age": 2,
-    "breed": "French Bulldoge",
-    "location": "Gerber, South Dakota"
+    "name": "Frieda",
+    "picture": "images/scottish-terridoge.jpeg",
+    "age": 3,
+    "breed": "Scottish Terridoge",
+    "location": "Lisco, AL"
   },
   {
     "id": 5,
@@ -45,7 +45,7 @@
     "picture": "images/french-bulldoge.jpeg",
     "age": 3,
     "breed": "French Bulldoge",
-    "location": "Innsbrook, Illinois"
+    "location": "Innsbrook, IL"
   },
   {
     "id": 6,
@@ -53,7 +53,7 @@
     "picture": "images/golden-doggo.jpeg",
     "age": 3,
     "breed": "Golden Doggo",
-    "location": "Soudan, Louisiana"
+    "location": "Soudan, LO"
   },
   {
     "id": 7,
@@ -69,7 +69,7 @@
     "picture": "images/french-bulldoge.jpeg",
     "age": 2,
     "breed": "French Bulldoge",
-    "location": "Honolulu, Hawaii"
+    "location": "Honolulu, HI"
   },
   {
     "id": 9,
@@ -77,7 +77,7 @@
     "picture": "images/doger.jpeg",
     "age": 3,
     "breed": "Doger",
-    "location": "Matheny, Utah"
+    "location": "Matheny, UT"
   },
   {
     "id": 10,
@@ -85,7 +85,7 @@
     "picture": "images/doger.jpeg",
     "age": 2,
     "breed": "Doger",
-    "location": "Tyhee, Indiana"
+    "location": "Tyhee, IN"
   },
   {
     "id": 11,
@@ -93,7 +93,7 @@
     "picture": "images/scottish-terridoge.jpeg",
     "age": 3,
     "breed": "Scottish Terridoge",
-    "location": "Windsor, Montana"
+    "location": "Windsor, MO"
   },
   {
     "id": 12,
@@ -101,7 +101,7 @@
     "picture": "images/french-bulldoge.jpeg",
     "age": 3,
     "breed": "French Bulldoge",
-    "location": "Kingstowne, Nevada"
+    "location": "Kingstowne, NV"
   },
   {
     "id": 13,
@@ -109,7 +109,7 @@
     "picture": "images/golden-doggo.jpeg",
     "age": 4,
     "breed": "Golden Doggo",
-    "location": "Sultana, Massachusetts"
+    "location": "Sultana, MS"
   },
   {
     "id": 14,
@@ -117,7 +117,7 @@
     "picture": "images/golden-doggo.jpeg",
     "age": 2,
     "breed": "Golden Doggo",
-    "location": "Broadlands, Oregon"
+    "location": "Broadlands, OR"
   },
   {
     "id": 15,
@@ -125,6 +125,6 @@
     "picture": "images/golden-doggo.jpeg",
     "age": 2,
     "breed": "Golden Doggo",
-    "location": "Dawn, Wisconsin"
+    "location": "Dawn, WI"
   }
 ]
