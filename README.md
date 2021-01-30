@@ -212,3 +212,34 @@ function withdraw() external onlyOwner {
 - Simplify truffle-config.js and README.md to use default Port 7545
 - Add different types of dogs
 - Stylize buttons
+- Display doges purchased by customer in index.html
+```
+function displayDoges(ids) {
+  $("#doges").empty();
+  for (id of ids) {
+    // Look up doge details from our contract. Returns a `doge` object
+    getDogeDetails(id)
+    .then(function(doge) {
+      // Using ES6's "template literals" to inject variables into the HTML.
+      // Append each one to our #doges div
+      $("#doges").append(`<div class="doge">
+        <ul>
+          <li>Name: ${doge.name}</li>
+          <li>Breed: ${doge.breed}</li>
+          <li>Age: ${doge.age}</li>
+          <li>Location: ${doge.location}</li>
+        </ul>
+      </div>`);
+    });
+  }
+}
+```
+```
+// Create struct in Purchase.sol
+  struct doge {
+    string name;
+    string breed;
+    uint age;
+    string location;
+  }
+```
