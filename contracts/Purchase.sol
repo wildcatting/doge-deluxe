@@ -1,8 +1,7 @@
 pragma solidity ^0.5.0;
 
-import "@openzeppelin/contracts/math/SafeMath.sol";
+import "./SafeMath.sol";
 import "./Ownable.sol";
-// import "./ERC721.sol";
 
 // @title Pet shop manager
 // @author Jun Sung Lee
