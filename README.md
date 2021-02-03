@@ -207,12 +207,13 @@ function withdraw() external onlyOwner {
 }
 ```
 - Reconfigure previous withdraw function as claimRefund
-- Implement ERC721 for tokenizing and allowing customers to swap doges via tokens
+- Add one or more tests to TestPurchase.sol and add corresponding events in Purchase.sol
+- Implement ERC721.sol for tokenizing and allowing customers to swap doges
 - Test and finalize web3/MetaMask boilerplate in index.html
 - Simplify truffle-config.js and README.md to use default Port 7545
 - Add different types of dogs
 - Stylize buttons
-- Display doges purchased by customer in index.html
+- Display doges purchased by customer in index.html (in another window or pop-up alert) 
 ```
 function displayDoges(ids) {
   $("#doges").empty();
@@ -242,4 +243,36 @@ function displayDoges(ids) {
     uint age;
     string location;
   }
+```
+- Reflect doge purchase by displaying on dapp front-end via an event listener
+```
+// Create event in Purchase.sol
+event Purchased(uint dogeId, string name, string breed); // dogeId = tokenId?
+```
+```
+// Subscribe to events in index.html
+// Add this code at the end of the startApp function to make sure the dogeEmporium contract has been initialized before adding an event listener
+
+dogeEmporium.events.Purchased()
+.on("data", function(event) {
+  let doge = event.returnValues;
+  // We can access this event's 3 return values on the `event.returnValues` object:
+  console.log(name + " was successfully purchased!", doge.dogeId, doge.name, doge.breed);
+}).on("error", console.error);
+
+// Use `filter` to only fire this code when `_to` equals `userAccount`
+dogeEmporium.events.Transfer({ filter: { _to: userAccount } }) // Transfer is located in ERC721.sol
+.on("data", function(event) {
+  let data = event.returnValues;
+  // The current user just received a doge!
+  // Do something here to update the UI to show it
+  getDogesByOwner(userAccount).then(displayDoges);
+}).on("error", console.error);
+
+// Query past events | Using events as cheaper form of storage
+dogeEmporium.getPastEvents("DogePurchased", { fromBlock: 0, toBlock: "latest" })
+.then(function(events) {
+  // `events` is an array of `event` objects that we can iterate, like we did above
+  // This code will get us a list of every doge that was ever purchased
+});
 ```
