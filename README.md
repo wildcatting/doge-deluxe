@@ -208,6 +208,7 @@ function withdraw() external onlyOwner {
 ```
 - Reconfigure previous withdraw function as claimRefund
 - Add one or more tests to TestPurchase.sol and add corresponding events in Purchase.sol
+- Update DogeEmporium.js with tests
 - Implement ERC721.sol for tokenizing and allowing customers to swap doges
 - Test and finalize web3/MetaMask boilerplate in index.html
 - Simplify truffle-config.js and README.md to use default Port 7545
