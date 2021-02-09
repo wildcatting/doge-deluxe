@@ -3,7 +3,8 @@ pragma solidity ^0.5.0;
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/Purchase.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
+import "../contracts/Ownable.sol";
+import "../contracts/SafeMath.sol";
 
 contract TestPurchase {
  // The address of the purchase contract to be tested
