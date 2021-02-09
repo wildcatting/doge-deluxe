@@ -1,15 +1,15 @@
 const Purchase = artifacts.require("Purchase");
+const utils = require("./helpers/utils");
 
 contract("Purchase", (accounts) => {
   let toPurchase;
-  let expectedDogeId;
 
   before(async () => {
-    adoption = await Purchase.deployed();
+    adoption = await toPurchase.deployed();
   });
 
   afterEach(async () => {
-    await contractInstance.kill();
+    await toPurchase.kill();
   });
 
   describe("purchasing a doge and retrieving account addresses", async () => {
@@ -19,13 +19,17 @@ contract("Purchase", (accounts) => {
     });
    
     it("can fetch the address of an owner by doge id", async () => {
-      const purchaser = await toPurchase.purchasers(8);
+      const purchaser = await toPurchase.getPßurchasers(8);
       assert.equal(purchaser, expectedPurchaser, "The owner of the purchased doge should be the first account.");
     });
 
     it("can fetch the collection of all doge owners' addresses", async () => {
       const purchasers = await toPurchase.getPurchasers();
       assert.equal(purchasers[8], expectedPurchaser, "The owner of the purchased doge should be in the collection.");
-     });
-   });
- });
+    });
+    
+//    it("should not allow discount after discount is used", async () => {
+//      await utils.shouldThrow(toPurchase.purchase()); // using utils.js
+//    })
+  });
+});
