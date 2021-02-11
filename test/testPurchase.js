@@ -32,8 +32,8 @@ contract("Purchase", (accounts) => {
       })
     });
     
-//    it("should not allow discount after discount is used", async () => {
-//      await utils.shouldThrow(toPurchase.purchase()); // using utils.js
-//    })
+    xit("should not allow discount after discount is used", async () => {
+      await utils.shouldThrow(toPurchase.purchase()); // using utils.js
+    })
   });
 });
