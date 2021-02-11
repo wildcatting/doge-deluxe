@@ -18,14 +18,18 @@ contract("Purchase", (accounts) => {
       expectedPurchaser = accounts[0];
     });
    
-    it("can fetch the address of an owner by doge id", async () => {
-      const purchaser = await toPurchase.getPßurchasers(8);
-      assert.equal(purchaser, expectedPurchaser, "The owner of the purchased doge should be the first account.");
+    context("with the single-step scenario", async () => {
+      it("can fetch the address of an owner by doge id", async () => {
+        const purchaser = await toPurchase.getPurchasers(8);
+        assert.equal(purchaser, expectedPurchaser, "The owner of the purchased doge should be the first account.");
+      })
     });
 
-    it("can fetch the collection of all doge owners' addresses", async () => {
-      const purchasers = await toPurchase.getPurchasers();
-      assert.equal(purchasers[8], expectedPurchaser, "The owner of the purchased doge should be in the collection.");
+    context("with the multi-step scenario", async () => {
+      it("can fetch the collection of all doge owners' addresses", async () => {
+        const purchasers = await toPurchase.getPurchasers();
+        assert.equal(purchasers[8], expectedPurchaser, "The owner of the purchased doge should be in the collection.");
+      })
     });
     
 //    it("should not allow discount after discount is used", async () => {
