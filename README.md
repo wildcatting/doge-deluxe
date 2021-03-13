@@ -1,6 +1,6 @@
-# Doge Emporium 🐕
+# Doge Deluxe 🐕
 
-Doge Emporium is an expanded dapp based on [Truffle's Pet Shop Tutorial](https://www.trufflesuite.com/tutorials/pet-shop), with our shop offering the classic discount: "Buy one, get (the second) one free!"
+Doge Deluxe is an expanded dapp based on [Truffle's Pet Shop Tutorial](https://www.trufflesuite.com/tutorials/pet-shop), with our shop offering the classic discount: "Buy one, get (the second) one free!"
 
 To purchase a doge, the user needs to connect their [MetaMask Wallet](https://metamask.io). Once connected, the user's current wallet address will display below the shop logo. The owner of the shop can also revert all transactions, which allows customers to withdraw amounts they spent int the store. Only the owner can reset shop transactions and only customers who previously made purchases may withdraw ETH.
 
@@ -19,8 +19,8 @@ npm install -g truffle
 
 Clone this repo to your local machine:
 ```Bash
-git clone https://github.com/jun-sung/doge-emporium.git
-cd doge-emporium
+git clone https://github.com/jun-sung/doge-deluxe.git
+cd doge-deluxe
 ```
 
 Then install all the project dependencies:
@@ -148,7 +148,7 @@ The easiest way to interact with our dapp in a browser is through MetaMask, a br
   ```
     The dev server will launch and automatically open a new browser tab containing your DApp.
 
-2. A MetaMask pop-up should also appear requesting your approval to allow Jun's Doge Emporium to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.  
+2. A MetaMask pop-up should also appear requesting your approval to allow Doge Deluxe to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.  
 
     ![Optional Text](./images/RunDev.png)  
 
@@ -199,6 +199,7 @@ Here's a [video](https://vimeo.com/485815714) walkthrough of the DApp in action.
 
 ### To-Dos
 
+- Update Screenshots
 - Add onlyOwner withdraw function 
 ```
 function withdraw() external onlyOwner {
@@ -208,7 +209,7 @@ function withdraw() external onlyOwner {
 ```
 - Reconfigure previous withdraw function as claimRefund
 - Add one or more tests to TestPurchase.sol and add corresponding events in Purchase.sol
-- Update DogeEmporium.js with tests
+- Update DogeDeluxe.js with tests
 - Implement ERC721.sol for tokenizing and allowing customers to swap doges
 - Test and finalize web3/MetaMask boilerplate in index.html
 - Simplify truffle-config.js and README.md to use default Port 7545
@@ -252,9 +253,9 @@ event Purchased(uint dogeId, string name, string breed); // dogeId = tokenId?
 ```
 ```
 // Subscribe to events in index.html
-// Add this code at the end of the startApp function to make sure the dogeEmporium contract has been initialized before adding an event listener
+// Add this code at the end of the startApp function to make sure the dogeDeluxe contract has been initialized before adding an event listener
 
-dogeEmporium.events.Purchased()
+dogeDeluxe.events.Purchased()
 .on("data", function(event) {
   let doge = event.returnValues;
   // We can access this event's 3 return values on the `event.returnValues` object:
@@ -262,7 +263,7 @@ dogeEmporium.events.Purchased()
 }).on("error", console.error);
 
 // Use `filter` to only fire this code when `_to` equals `userAccount`
-dogeEmporium.events.Transfer({ filter: { _to: userAccount } }) // Transfer is located in ERC721.sol
+dogeDeluxe.events.Transfer({ filter: { _to: userAccount } }) // Transfer is located in ERC721.sol
 .on("data", function(event) {
   let data = event.returnValues;
   // The current user just received a doge!
@@ -271,7 +272,7 @@ dogeEmporium.events.Transfer({ filter: { _to: userAccount } }) // Transfer is lo
 }).on("error", console.error);
 
 // Query past events | Using events as cheaper form of storage
-dogeEmporium.getPastEvents("DogePurchased", { fromBlock: 0, toBlock: "latest" })
+dogeDeluxe.getPastEvents("DogePurchased", { fromBlock: 0, toBlock: "latest" })
 .then(function(events) {
   // `events` is an array of `event` objects that we can iterate, like we did above
   // This code will get us a list of every doge that was ever purchased
