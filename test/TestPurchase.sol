@@ -3,8 +3,7 @@ pragma solidity ^0.5.0;
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/Purchase.sol";
-import "../contracts/Ownable.sol";
-import "../contracts/SafeMath.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
 contract TestPurchase {
  // The address of the purchase contract to be tested
@@ -35,6 +34,11 @@ contract TestPurchase {
         // Store adopters in memory rather than contract's storage
         address[16] memory purchasers = buy.getPurchasers();
         Assert.equal(purchasers[expectedPetId], expectedPurchaser, "Owner of the expected pet should be this contract");
+    }
+
+    // Testing admin status of contract owner because this determines whether the reset button is visible or not.
+    function testIsNotAdmin() public {
+        Assert.equal(buy.isAdmin(), false, "Owner of the contract should not be the admin");
     }
 
     // Testing availability of withdrawable funds because this determines whether the refund button is visible or not.

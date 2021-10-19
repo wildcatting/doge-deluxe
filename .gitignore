@@ -1,3 +1,5 @@
 build
 node_modules
 .env
+src/js/dogedeluxe_abi.js
+contracts/ERC721.sol
