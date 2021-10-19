@@ -2,10 +2,10 @@
 
 Doge Deluxe is an expanded dapp based on [Truffle's Pet Shop Tutorial](https://www.trufflesuite.com/tutorials/pet-shop), with our shop offering the classic discount: "Buy one, get (the second) one free!"
 
-To purchase a doge, the user needs to connect their [MetaMask Wallet](https://metamask.io). Once connected, the user's current wallet address will display below the shop logo. The owner of the shop can also revert all transactions, which allows customers to withdraw amounts they spent int the store. Only the owner can reset shop transactions and only customers who previously made purchases may withdraw ETH.
+To buy a doge, the user needs to connect their [MetaMask Wallet](https://metamask.io). Once connected, the user's current wallet address will display below the shop logo. The owner of the shop can also revert all transactions, which allows customers to withdraw amounts they spent int the store. Only the owner can reset shop transactions and only customers who previously bought a doge may withdraw ETH.
 
 
-## Installation 📁
+## Installation
 
 There are a few technical requirements before we start. Please install the following:
 
@@ -28,7 +28,7 @@ Then install all the project dependencies:
 npm install
 ```
 
-## Compiling, migrating, and testing the smart contract 💻
+## Compiling, migrating, and testing the smart contract
 
 Solidity is a compiled language, meaning we need to compile our Solidity to bytecode for the Ethereum Virtual Machine (EVM) to execute. Since our DApp is setup as a Truffle project, we'll be utilizing Truffle's command tools to compile, migrate, and test our smart contract on a local blockchain.
 
@@ -40,7 +40,7 @@ truffle compile
 ```
 
 You should see output similar to the following:  
-![Optional Text](./images/TruffleCompile.png)  
+![Truffle Compile](./images/TruffleCompile.png)  
 
 ### Migration
 
@@ -48,7 +48,7 @@ If there are no errors, we've successfully compiled our contracts and now we can
 
 Before we can migrate our contract to the blockchain, we need to have a blockchain running. In this walkthrough, we'll use [Ganache](https://www.trufflesuite.com/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. If you haven't already, [download Ganache](https://www.trufflesuite.com/ganache) and double click the icon to launch the application.
 
-![Optional Text](./images/GanacheInitial.png)  
+![Initialize Ganache](./images/GanacheInitial.png)  
 
 You can also run the [command line version](https://github.com/trufflesuite/ganache), `ganache-cli` via npm:
 ```Bash
@@ -57,7 +57,7 @@ npm install -g ganache-cli
 
 By default, Ganache should be running on port 7545. The details can be seen in the **RPC Server**.
 
-![Optional Text](./images/GanacheGUI.png)  
+![Ganache GUI](./images/GanacheGUI.png)  
 
 Our truffle-config.js file is currently set to run development on Port 8545.
 ```javascript
@@ -79,7 +79,7 @@ truffle migrate
 
 You should see output similar to the following:  
 
-![Optional Text](./images/TruffleMigrate.png)  
+![Truffle Migrate](./images/TruffleMigrate.png)  
 
 ### Testing
 
@@ -90,10 +90,10 @@ truffle test
 
 If all the tests pass, you'll see console output similar to this:  
 
-![Optional Text](./images/TruffleTest.png)  
+![Truffle Test](./images/TruffleTest.png)  
 
 
-## Interacting with the DApp in a browser 🌐
+## Interacting with the DApp in a browser
 
 Now we're ready to use our DApp!
 
@@ -167,7 +167,7 @@ And in MetaMask, you'll see the transaction listed:
 
    ![Optional Text](./images/MetaMaskBalance.png)  
 
-    You'll also see the same transaction listed in Ganache under the "Transactions" section and new ETH balance for the corresponding address.
+    > You'll also see the same transaction listed in Ganache under the "Transactions" section and new ETH balance for the corresponding address.
 
 6. In order to use the shop discount, select another doge. MetaMask should now prompt you with a transaction costing 0 ETH.  
 
@@ -196,6 +196,8 @@ Here's a [video](https://vimeo.com/485815714) walkthrough of the DApp in action.
 | [design_pattern_decisions.md](./design_pattern_decisions.md) | Smart contract design rationale |
 | [avoiding_common_attacks.md](./avoiding_common_attacks.md) | Security measures against hacks |
 | [deployed_addresses.txt](./deployed_addresses.txt) | Ropsten testnet deployment info |
+
+---
 
 ### To-Dos
 
