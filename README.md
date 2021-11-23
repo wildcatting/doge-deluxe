@@ -1,6 +1,6 @@
-# Doge Deluxe 🐕
+# Doge Deluxe
 
-Doge Deluxe is an expanded dapp based on [Truffle's Pet Shop Tutorial](https://www.trufflesuite.com/tutorials/pet-shop), with our shop offering the classic discount: "Buy one, get (the second) one free!"
+Doge Deluxe is an expanded dapp based on [Truffle's Pet Shop Tutorial](https://www.trufflesuite.com/tutorial), with our shop offering the classic discount: "Buy one, get (the second) one free!"
 
 To buy a doge, the user needs to connect their [MetaMask Wallet](https://metamask.io). Once connected, the user's current wallet address will display below the shop logo. The owner of the shop can also revert all transactions, which allows customers to withdraw amounts they spent int the store. Only the owner can reset shop transactions and only customers who previously bought a doge may withdraw ETH.
 
