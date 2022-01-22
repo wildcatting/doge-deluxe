@@ -18,7 +18,7 @@
     "@truffle/hdwallet-provider": "^1.0.37",
     "dotenv": "^8.2.0",
     "lite-server": "^2.6.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "request": "^2.88.2",
     "truffle-hdwallet-provider": "^1.0.6",
     "underscore": "^1.12.1"
